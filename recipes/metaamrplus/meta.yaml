@@ -31,7 +31,6 @@ build:
       "$PREFIX/bin/annotate_metaamrplus.py"
 
     DB_DIR="$SRC_DIR/db"
-
     cp "$DB_DIR"/MetaAMRplus_DB_v1.0.* "$PREFIX/share/metaamrplus/db/" || true
 
     if [[ -f "$DB_DIR/MetaAMRplus_v1.0.idmap.tsv" ]]; then
@@ -43,13 +42,13 @@ requirements:
     - coreutils
 
   host:
-    - python >=3.8
+    - python
 
   run:
-    - python >=3.8
+    - python
     - coreutils
     - gawk
-    - blast >=2.14
+    - blast
     - prodigal
 
 test:
